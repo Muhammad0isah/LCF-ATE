@@ -274,7 +274,7 @@ if __name__ == "__main__":
         logger.info('-' * 80)
         logger.info('Config {} (totally {} configs)'.format(exp_configs.index(config) + 1, len(exp_configs)))
         results = []
-        max_apc_test_acc, max_apc_test_f1, max_ate_test_f1 = 0, 0, 0
+        max_ate_test_f1 = 0
         for i in range(n):
             config.device = device
             config.seed = i + 1
@@ -282,7 +282,7 @@ if __name__ == "__main__":
             ate_test_f1 = main(config)
             if ate_test_f1 > max_ate_test_f1:
                 max_ate_test_f1 = ate_test_f1
-            logger.info('max_ate_test_f1:{} max_apc_test_acc: {}\tmax_apc_test_f1: {} \t'
-                        .format(max_ate_test_f1, max_apc_test_acc, max_apc_test_f1))
+            logger.info('max_ate_test_f1:{}'
+                        .format(max_ate_test_f1))
 
 
