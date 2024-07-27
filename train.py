@@ -14,9 +14,9 @@ from time import strftime, localtime
 import numpy as np
 import torch
 import torch.nn.functional as F
-from transformers.optimization import AdamW
+# from transformers.optimization import AdamW
 from transformers.models.bert.modeling_bert import BertModel
-from transformers import BertTokenizer
+from transformers import BertTokenizer, AdamW
 # from pytorch_transformers.optimization import AdamW
 # from pytorch_transformers.tokenization_bert import BertTokenizer
 # from pytorch_transformers.modeling_bert import BertModel
@@ -225,7 +225,7 @@ def main(config):
                         logger.info(f'ATE_test_f1: {current_ate_test_f1}(max:{max_ate_test_f1})')
                         logger.info('*' * 80)
 
-        return [max_ate_test_f1]
+        return max_ate_test_f1
 
     return train()
 
@@ -277,6 +277,7 @@ if __name__ == "__main__":
         max_ate_test_f1 = 0
         for i in range(n):
             config.device = device
+
             config.seed = i + 1
             logger.info('No.{} training process of {}'.format(i + 1, n))
             ate_test_f1 = main(config)
