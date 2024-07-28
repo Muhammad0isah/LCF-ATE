@@ -1,0 +1,162 @@
+> n_trainable_params: 109484547, n_nontrainable_params: 0
+> training arguments:
+>>> model_name: bert_spc
+>>> dataset: restaurant
+>>> optimizer: <class 'transformers.optimization.AdamW'>
+>>> initializer: <function xavier_uniform_ at 0x7f03db696040>
+>>> lr: 3e-05
+>>> dropout: 0
+>>> l2reg: 0.01
+>>> num_epoch: 5
+>>> batch_size: 16
+>>> log_step: 10
+>>> embed_dim: 300
+>>> hidden_dim: 300
+>>> bert_dim: 768
+>>> pretrained_bert_name: bert-base-uncased
+>>> max_seq_len: 80
+>>> polarities_dim: 3
+>>> hops: 3
+>>> patience: 5
+>>> device: cpu
+>>> seed: 1234
+>>> valset_ratio: 0
+>>> local_context_focus: cdm
+>>> SRD: 5
+>>> model_class: <class 'models.bert_spc.BERT_SPC'>
+>>> dataset_file: {'train': './datasets/semeval14/Restaurants_Train.xml.seg', 'test': './datasets/semeval14/Restaurants_Test_Gold.xml.seg'}
+>>> inputs_cols: ['concat_bert_indices', 'concat_segments_indices']
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch: 0
+loss: 1.0284, acc: 0.5437
+loss: 1.0115, acc: 0.5563
+loss: 0.9873, acc: 0.5771
+loss: 0.9898, acc: 0.5719
+loss: 0.9793, acc: 0.5825
+loss: 0.9852, acc: 0.5760
+loss: 0.9823, acc: 0.5741
+loss: 0.9742, acc: 0.5750
+loss: 0.9593, acc: 0.5792
+loss: 0.9238, acc: 0.5938
+loss: 0.8992, acc: 0.6057
+loss: 0.8828, acc: 0.6130
+loss: 0.8584, acc: 0.6250
+loss: 0.8415, acc: 0.6339
+loss: 0.8215, acc: 0.6454
+loss: 0.8134, acc: 0.6512
+loss: 0.8008, acc: 0.6566
+loss: 0.7856, acc: 0.6646
+loss: 0.7774, acc: 0.6704
+loss: 0.7693, acc: 0.6741
+loss: 0.7578, acc: 0.6801
+loss: 0.7505, acc: 0.6835
+> val_acc: 0.8152, val_f1: 0.7241
+>> saved: state_dict/bert_spc_restaurant_val_acc_0.8152
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch: 1
+loss: 0.3747, acc: 0.8750
+loss: 0.4039, acc: 0.8571
+loss: 0.4169, acc: 0.8385
+loss: 0.4388, acc: 0.8235
+loss: 0.4656, acc: 0.8054
+loss: 0.4602, acc: 0.8067
+loss: 0.4500, acc: 0.8145
+loss: 0.4502, acc: 0.8167
+loss: 0.4509, acc: 0.8170
+loss: 0.4458, acc: 0.8205
+loss: 0.4395, acc: 0.8221
+loss: 0.4369, acc: 0.8251
+loss: 0.4426, acc: 0.8246
+loss: 0.4421, acc: 0.8237
+loss: 0.4354, acc: 0.8268
+loss: 0.4333, acc: 0.8287
+loss: 0.4295, acc: 0.8308
+loss: 0.4294, acc: 0.8308
+loss: 0.4277, acc: 0.8332
+loss: 0.4296, acc: 0.8315
+loss: 0.4317, acc: 0.8297
+loss: 0.4292, acc: 0.8318
+loss: 0.4263, acc: 0.8334
+> val_acc: 0.8250, val_f1: 0.7224
+>> saved: state_dict/bert_spc_restaurant_val_acc_0.825
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch: 2
+loss: 0.2092, acc: 0.9375
+loss: 0.2331, acc: 0.9167
+loss: 0.2430, acc: 0.9107
+loss: 0.2189, acc: 0.9161
+loss: 0.2132, acc: 0.9167
+loss: 0.2179, acc: 0.9170
+loss: 0.2330, acc: 0.9127
+loss: 0.2358, acc: 0.9103
+loss: 0.2407, acc: 0.9084
+loss: 0.2404, acc: 0.9082
+loss: 0.2442, acc: 0.9068
+loss: 0.2410, acc: 0.9073
+loss: 0.2497, acc: 0.9053
+loss: 0.2562, acc: 0.9031
+loss: 0.2515, acc: 0.9050
+loss: 0.2490, acc: 0.9066
+loss: 0.2501, acc: 0.9070
+loss: 0.2544, acc: 0.9059
+loss: 0.2526, acc: 0.9066
+loss: 0.2511, acc: 0.9075
+loss: 0.2501, acc: 0.9078
+loss: 0.2477, acc: 0.9083
+> val_acc: 0.8339, val_f1: 0.7402
+>> saved: state_dict/bert_spc_restaurant_val_acc_0.8339
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch: 3
+loss: 0.1590, acc: 0.9062
+loss: 0.1177, acc: 0.9635
+loss: 0.1018, acc: 0.9688
+loss: 0.1087, acc: 0.9668
+loss: 0.0935, acc: 0.9732
+loss: 0.0996, acc: 0.9724
+loss: 0.1025, acc: 0.9718
+loss: 0.1034, acc: 0.9714
+loss: 0.1144, acc: 0.9672
+loss: 0.1200, acc: 0.9660
+loss: 0.1185, acc: 0.9657
+loss: 0.1171, acc: 0.9660
+loss: 0.1190, acc: 0.9647
+loss: 0.1182, acc: 0.9654
+loss: 0.1201, acc: 0.9635
+loss: 0.1183, acc: 0.9642
+loss: 0.1222, acc: 0.9618
+loss: 0.1239, acc: 0.9611
+loss: 0.1232, acc: 0.9612
+loss: 0.1260, acc: 0.9593
+loss: 0.1340, acc: 0.9564
+loss: 0.1335, acc: 0.9561
+loss: 0.1332, acc: 0.9566
+> val_acc: 0.8402, val_f1: 0.7735
+>> saved: state_dict/bert_spc_restaurant_val_acc_0.8402
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch: 4
+loss: 0.1048, acc: 0.9688
+loss: 0.0905, acc: 0.9727
+loss: 0.1091, acc: 0.9663
+loss: 0.0946, acc: 0.9688
+loss: 0.0996, acc: 0.9688
+loss: 0.0945, acc: 0.9699
+loss: 0.0862, acc: 0.9725
+loss: 0.0845, acc: 0.9720
+loss: 0.0834, acc: 0.9724
+loss: 0.0822, acc: 0.9720
+loss: 0.0851, acc: 0.9705
+loss: 0.0854, acc: 0.9704
+loss: 0.0863, acc: 0.9702
+loss: 0.0884, acc: 0.9692
+loss: 0.0876, acc: 0.9692
+loss: 0.0895, acc: 0.9688
+loss: 0.0917, acc: 0.9684
+loss: 0.0944, acc: 0.9670
+loss: 0.0940, acc: 0.9674
+loss: 0.0953, acc: 0.9675
+loss: 0.0937, acc: 0.9681
+loss: 0.0924, acc: 0.9688
+loss: 0.0916, acc: 0.9690
+> val_acc: 0.8500, val_f1: 0.7771
+>> saved: state_dict/bert_spc_restaurant_val_acc_0.85
+>> test_acc: 0.8500, test_f1: 0.7771
